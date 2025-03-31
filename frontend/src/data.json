@@ -1,0 +1,320 @@
+{
+  "data": {
+    "javascript": [
+      {
+        "id": 1,
+        "question": "Which type of JavaScript language is ___?",
+        "options": ["Object-Oriented", "Object-Based", "Assembly-language", "High-level"],
+        "correctAnswer": "Object-Based"
+      },
+      {
+        "id": 2,
+        "question": "Which of the following keywords is used to define a variable in JavaScript?",
+        "options": ["var", "let", "const", "All of the above"],
+        "correctAnswer": "All of the above"
+      },
+      {
+        "id": 3,
+        "question": "Which function is used to serialize an object into a JSON string?",
+        "options": ["JSON.parse()", "JSON.stringify()", "JSON.toObject()", "JSON.encode()"],
+        "correctAnswer": "JSON.stringify()"
+      },
+      {
+        "id": 4,
+        "question": "Which method is used to round a number to the nearest integer in JavaScript?",
+        "options": ["Math.floor()", "Math.round()", "Math.ceil()", "Math.truncate()"],
+        "correctAnswer": "Math.round()"
+      },
+      {
+        "id": 5,
+        "question": "What is the output of `typeof null`?",
+        "options": ["null", "undefined", "object", "string"],
+        "correctAnswer": "object"
+      },
+      {
+        "id": 6,
+        "question": "Which built-in method removes the last element from an array and returns it?",
+        "options": ["pop()", "push()", "shift()", "splice()"],
+        "correctAnswer": "pop()"
+      },
+      {
+        "id": 7,
+        "question": "Which statement is used to stop a loop in JavaScript?",
+        "options": ["break", "continue", "exit", "return"],
+        "correctAnswer": "break"
+      },
+      {
+        "id": 8,
+        "question": "What is the correct syntax for an arrow function?",
+        "options": [
+          "const func = () => {}",
+          "const func = function() {}",
+          "function func() {}",
+          "All of the above"
+        ],
+        "correctAnswer": "const func = () => {}"
+      },
+      {
+        "id": 9,
+        "question": "What will `console.log(2 + '2')` output?",
+        "options": ["22", "4", "NaN", "Error"],
+        "correctAnswer": "22"
+      },
+      {
+        "id": 10,
+        "question": "Which keyword is used to handle exceptions in JavaScript?",
+        "options": ["catch", "throw", "try", "finally"],
+        "correctAnswer": "try"
+      },
+      {
+        "id": 11,
+        "question": "What does `setTimeout()` do in JavaScript?",
+        "options": [
+          "Executes a function after a specified delay",
+          "Executes a function immediately",
+          "Runs a function repeatedly",
+          "Stops script execution"
+        ],
+        "correctAnswer": "Executes a function after a specified delay"
+      },
+      {
+        "id": 12,
+        "question": "How do you check if a variable is an array?",
+        "options": [
+          "typeof variable",
+          "variable instanceof Array",
+          "Array.isArray(variable)",
+          "Both B and C"
+        ],
+        "correctAnswer": "Both B and C"
+      },
+      {
+        "id": 13,
+        "question": "Which JavaScript method is used to find the first matching element in an array?",
+        "options": ["filter()", "map()", "find()", "indexOf()"],
+        "correctAnswer": "find()"
+      },
+      {
+        "id": 14,
+        "question": "What is the output of `console.log(typeof NaN)`?",
+        "options": ["number", "NaN", "undefined", "object"],
+        "correctAnswer": "number"
+      },
+      {
+        "id": 15,
+        "question": "What will `console.log(0 == '0')` output?",
+        "options": ["true", "false", "NaN", "Error"],
+        "correctAnswer": "true"
+      },
+      {
+        "id": 16,
+        "question": "Which method is used to merge two or more arrays?",
+        "options": ["concat()", "push()", "join()", "splice()"],
+        "correctAnswer": "concat()"
+      },
+      {
+        "id": 17,
+        "question": "How do you declare a constant variable in JavaScript?",
+        "options": ["var x = 10", "let x = 10", "const x = 10", "x = 10"],
+        "correctAnswer": "const x = 10"
+      },
+      {
+        "id": 18,
+        "question": "Which loop executes at least once before checking the condition?",
+        "options": ["for", "while", "do-while", "foreach"],
+        "correctAnswer": "do-while"
+      },
+      {
+        "id": 19,
+        "question": "What is the output of `console.log(1 === '1')`?",
+        "options": ["true", "false", "NaN", "Error"],
+        "correctAnswer": "false"
+      },
+      {
+        "id": 20,
+        "question": "Which event is triggered when a user clicks on an element?",
+        "options": ["onchange", "onmouseover", "onclick", "onkeypress"],
+        "correctAnswer": "onclick"
+      }
+    ]
+    ,
+    "react": [
+      {
+        "id": 1,
+        "question": "What is React primarily used for?",
+        "options": ["Backend development", "Database management", "Building user interfaces", "Operating systems"],
+        "correctAnswer": "Building user interfaces"
+      },
+      {
+        "id": 2,
+        "question": "Which hook is used to manage state in functional components?",
+        "options": ["useState", "useEffect", "useContext", "useReducer"],
+        "correctAnswer": "useState"
+      },
+      {
+        "id": 3,
+        "question": "What is the correct syntax for a functional component?",
+        "options": [
+          "function Component() {}", 
+          "const Component = () => {}", 
+          "class Component extends React.Component {}", 
+          "Both A and B"
+        ],
+        "correctAnswer": "Both A and B"
+      },
+      {
+        "id": 4,
+        "question": "Which of the following is NOT a built-in React hook?",
+        "options": ["useState", "useEffect", "useRouter", "useRef"],
+        "correctAnswer": "useRouter"
+      },
+      {
+        "id": 5,
+        "question": "What does useEffect() do in React?",
+        "options": [
+          "Manages state updates",
+          "Performs side effects in functional components",
+          "Handles event listeners",
+          "Creates reusable components"
+        ],
+        "correctAnswer": "Performs side effects in functional components"
+      },
+      {
+        "id": 6,
+        "question": "Which of the following statements is true about React props?",
+        "options": [
+          "Props are immutable",
+          "Props can be modified inside a component",
+          "Props are used for local state management",
+          "Props can only pass strings"
+        ],
+        "correctAnswer": "Props are immutable"
+      },
+      {
+        "id": 7,
+        "question": "What is JSX?",
+        "options": [
+          "A syntax extension for JavaScript",
+          "A JavaScript library",
+          "A CSS preprocessor",
+          "A template language"
+        ],
+        "correctAnswer": "A syntax extension for JavaScript"
+      },
+      {
+        "id": 8,
+        "question": "How do you pass data from a parent to a child component?",
+        "options": ["State", "Props", "Hooks", "Context"],
+        "correctAnswer": "Props"
+      },
+      {
+        "id": 9,
+        "question": "Which lifecycle method is called when a component is first rendered?",
+        "options": [
+          "componentDidMount",
+          "componentDidUpdate",
+          "componentWillUnmount",
+          "componentWillUpdate"
+        ],
+        "correctAnswer": "componentDidMount"
+      },
+      {
+        "id": 10,
+        "question": "What is the purpose of useContext()?",
+        "options": [
+          "To manage component state",
+          "To perform side effects",
+          "To consume values from a React Context",
+          "To create a new React component"
+        ],
+        "correctAnswer": "To consume values from a React Context"
+      },
+      {
+        "id": 11,
+        "question": "Which hook is used to manage complex state logic in React?",
+        "options": ["useState", "useEffect", "useReducer", "useMemo"],
+        "correctAnswer": "useReducer"
+      },
+      {
+        "id": 12,
+        "question": "What is the purpose of the key prop in lists?",
+        "options": [
+          "To improve performance and avoid re-rendering issues",
+          "To make items draggable",
+          "To style list items",
+          "To store list items in state"
+        ],
+        "correctAnswer": "To improve performance and avoid re-rendering issues"
+      },
+      {
+        "id": 13,
+        "question": "Which of the following is NOT a feature of React?",
+        "options": ["Virtual DOM", "Component-based architecture", "Two-way data binding", "One-way data flow"],
+        "correctAnswer": "Two-way data binding"
+      },
+      {
+        "id": 14,
+        "question": "How do you create a React Context?",
+        "options": [
+          "React.createContext()",
+          "useState()",
+          "useEffect()",
+          "React.useContext()"
+        ],
+        "correctAnswer": "React.createContext()"
+      },
+      {
+        "id": 15,
+        "question": "What does useRef() return?",
+        "options": ["A function", "A DOM element", "An object with a .current property", "A JSX element"],
+        "correctAnswer": "An object with a .current property"
+      },
+      {
+        "id": 16,
+        "question": "Which React hook is used to optimize performance by memoizing values?",
+        "options": ["useEffect", "useCallback", "useMemo", "useReducer"],
+        "correctAnswer": "useMemo"
+      },
+      {
+        "id": 17,
+        "question": "Which method is used to update the state in a class component?",
+        "options": ["setState()", "useState()", "updateState()", "this.state()"],
+        "correctAnswer": "setState()"
+      },
+      {
+        "id": 18,
+        "question": "What does React.Fragment do?",
+        "options": [
+          "Returns an empty component",
+          "Wraps multiple elements without adding extra DOM nodes",
+          "Handles errors in components",
+          "Creates a new component"
+        ],
+        "correctAnswer": "Wraps multiple elements without adding extra DOM nodes"
+      },
+      {
+        "id": 19,
+        "question": "Which statement about React keys is correct?",
+        "options": [
+          "They should be globally unique across the application",
+          "They should be unique within a list",
+          "They can be duplicated",
+          "They are optional in lists"
+        ],
+        "correctAnswer": "They should be unique within a list"
+      },
+      {
+        "id": 20,
+        "question": "What is the correct way to handle forms in React?",
+        "options": [
+          "Use controlled components with state",
+          "Use uncontrolled components with refs",
+          "Use both controlled and uncontrolled components",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      }
+    ]
+    
+  }
+}

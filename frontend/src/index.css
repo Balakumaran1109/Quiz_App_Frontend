@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Home */
+
+.chooseBox > div > div > input,
+label {
+  cursor: pointer;
+}
+
+.inputBox > b {
+  color: green;
+  margin-top: 5px;
+}
+
+.container > div:nth-child(1) {
+  height: 100px;
+}
+
+.container > div:nth-child(1) > h1 {
+  font-family: "Tektur", sans-serif;
+  font-size: x-large;
+}
+
+/* Quiz Page */
+
+.timer > div {
+  width: 200px;
+}
+
+.tracking > div > ol > li {
+  width: calc(100% / 5 - 10px);
+}
+
+.tracking > div {
+  padding-top: 10px;
+  padding-left: 5px;
+  max-width: 300px;
+}
+
+.quizBox > div > div > button:hover {
+  background-color: var(--bs-success);
+}
+
+.quizPage > h1 {
+  font-size: xx-large;
+  margin-bottom: 30px;
+}
+
+.quizBox {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.timeout {
+  margin-top: 200px;
+}
+
+.timeout > button {
+  font-size: x-large !important;
+}
+
+/* Result Page */
+
+.table > thead > tr > th {
+  color: white !important;
+  background-color: var(--bs-success);
+  font-size: larger;
+}
+
+.table > tbody > tr > td {
+  font-size: larger;
+}
+
+.resultTable > div > h1 {
+  font-size: x-large;
+}
+
+.resultTable > div > h1 > span > h1 {
+  font-size: xx-large;
+  font-family: "Tektur", sans-serif;
+  color: aqua;
+  margin-top: 5px;
+}
+
+.resultTable > div > button{
+  font-size: larger;
+}
+
+.allQuizButtons > button:hover {
+  background-color: inherit !important; 
+  color: inherit !important; 
+  border-color: inherit !important;
+  cursor: no-drop;
+}
+
+/* Confirm Box */
+
+.modal-header > h5 {
+  padding-left: 120px;
+}
+
+.btn-white:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.correct-answer {
+  background-color: green !important;
+}
+
+#number_box {
+  cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+  .container > div > h1 {
+    width: 100% !important;
+  }
+}
+
