@@ -7,7 +7,7 @@ import { UserProvider } from "./context/UserContext";
 import { ToastContainer } from "react-toastify";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://quiz-app-backend-9r3f.onrender.com";
 
 const App = () => {
   return (
