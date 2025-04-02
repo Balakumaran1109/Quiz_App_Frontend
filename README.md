@@ -9,14 +9,14 @@ A dynamic and interactive quiz platform built using the MERN stack, designed to 
 - **Detailed Progress Tracking** – Users can review scores, submitted answers, and analyze correct vs. incorrect responses in real time.
 -  **Intelligent Question Navigation** – A visually distinct question box allows users to seamlessly switch between answered and unanswered questions, with color-coded indicators for clarity.
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **Frontend:** React, Bootstrap, Redux
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Authentication:** JWT
 
-## 📌 Installation
+##  Installation
 
 1. Clone the repository:
    ```sh
@@ -35,11 +35,11 @@ A dynamic and interactive quiz platform built using the MERN stack, designed to 
    npm start
    ```
 
-## 📫 Contributing
+##  Contributing
 
 I welcome contributions to this project! Feel free to submit bug reports, feature requests, or pull requests on our GitHub repository.
 
-## 🔗 Backend Repository
+##  Backend Repository
 
 The link to the Quiz App backend repository can be found here [Frontend Repo](https://github.com/Balakumaran1109/Quiz_App_Backend).
 
