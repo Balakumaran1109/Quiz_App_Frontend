@@ -11,7 +11,7 @@ A dynamic and interactive quiz platform built using the MERN stack, designed to 
 
 ##  Tech Stack
 
-- **Frontend:** React, Bootstrap, Redux
+- **Frontend:** React, Bootstrap
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Authentication:** JWT
