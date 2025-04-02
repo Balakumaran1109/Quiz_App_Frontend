@@ -39,6 +39,9 @@ A dynamic and interactive quiz platform built using the MERN stack, designed to 
 
 I welcome contributions to this project! Feel free to submit bug reports, feature requests, or pull requests on our GitHub repository.
 
+##  License
+This project is open-source and available under the MIT License.
+
 ##  Backend Repository
 
 The link to the Quiz App backend repository can be found here [Frontend Repo](https://github.com/Balakumaran1109/Quiz_App_Backend).
