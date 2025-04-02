@@ -1,21 +1,45 @@
- Flexible Quiz Application
-A dynamic Quiz Application built using the MERN stack, offering users an engaging quiz experience with real-time answer submission, instant feedback, and performance tracking.
+#  Flexible Quiz Application - Frontend
 
- Features
-Automatic Answer Submission – Click an option, and it's instantly submitted.
+A dynamic and interactive quiz platform built using the MERN stack, designed to provide a seamless and engaging quiz experience with real-time answer submission, instant feedback, and performance tracking.
 
-Category-Based Questions – Users can choose quizzes based on topics.
+##  Features
 
-Real-Time Feedback – Immediate response on correct/incorrect answers.
+- **Category-Based Quizzes** – Users can choose between quiz topics, ensuring a personalized learning experience.  
+- **Advanced Timer Integration** – A dynamic countdown timer tracks progress and auto-submits the quiz when time expires. 
+- **Detailed Progress Tracking** – Users can review scores, submitted answers, and analyze correct vs. incorrect responses in real time.
+-  **Intelligent Question Navigation** – A visually distinct question box allows users to seamlessly switch between answered and unanswered questions, with color-coded indicators for clarity.
 
-Timer Integration – Keeps track of quiz duration.
+## 🛠 Tech Stack
 
-Performance Tracking – Users can review scores and progress.
+- **Frontend:** React, Bootstrap, Redux
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT
 
-Secure Authentication – User login and history tracking.
+## 📌 Installation
 
- Tech Stack
-Frontend: React, HTML, CSS, JavaScript
-Backend: Node.js, Express.js
-Database: MongoDB, Mongoose
-Tools & DevOps: Git, GitHub, Postman, Render
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Balakumaran1109/Quiz_App_Frontend.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd frontend
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+
+## 📫 Contributing
+
+I welcome contributions to this project! Feel free to submit bug reports, feature requests, or pull requests on our GitHub repository.
+
+## 🔗 Backend Repository
+
+The link to the Quiz App backend repository can be found here [Frontend Repo](https://github.com/Balakumaran1109/Quiz_App_Backend).
+
