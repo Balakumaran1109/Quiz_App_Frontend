@@ -44,5 +44,5 @@ This project is open-source and available under the MIT License.
 
 ##  Backend Repository
 
-The link to the Quiz App backend repository can be found here [Frontend Repo](https://github.com/Balakumaran1109/Quiz_App_Backend).
+The link to the Quiz App backend repository can be found here [Backend Repo](https://github.com/Balakumaran1109/Quiz_App_Backend).
 
