@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { getTimer, updateTimer } from "../api/timerApi";
 
-const Countdown = ({handleTimeOut}) => {
-  const [remainingTime, setRemainingTime] = useState(0);
+const Countdown = ({ handleTimeOut }) => {
+  const [remainingTime, setRemainingTime] = useState(900);
   const intervalRef = useRef(null);
   const timerId = localStorage.getItem("timer_id");
 
@@ -15,10 +15,11 @@ const Countdown = ({handleTimeOut}) => {
     await updateTimer(newTime);
   };
 
-
   // Get remaining time
   useEffect(() => {
-    handleGetTimer();
+    setTimeout(() => {
+      handleGetTimer();
+    }, 10000);
   }, [timerId]);
 
   // Update Timer
@@ -31,8 +32,8 @@ const Countdown = ({handleTimeOut}) => {
       setRemainingTime((prev) => {
         if (typeof prev !== "number" || isNaN(prev)) return 0;
         if (prev <= 0) {
-          handleTimeOut(true)
           clearInterval(intervalRef.current);
+          handleTimeOut(true);
           return 0;
         }
 
@@ -49,6 +50,7 @@ const Countdown = ({handleTimeOut}) => {
     return () => clearInterval(intervalRef.current);
   }, [remainingTime]);
 
+  // Format seconds to minutes
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;

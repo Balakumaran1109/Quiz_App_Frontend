@@ -11,6 +11,13 @@ li {
   list-style-type: none;
 }
 
+html,
+body {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 /* Home */
 
 .chooseBox > div > div > input,
@@ -58,7 +65,7 @@ label {
 }
 
 .quizBox {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -75,31 +82,18 @@ label {
 .table > thead > tr > th {
   color: white !important;
   background-color: var(--bs-success);
-  font-size: larger;
 }
 
-.table > tbody > tr > td {
-  font-size: larger;
-}
-
-.resultTable > div > h1 {
-  font-size: x-large;
-}
-
-.resultTable > div > h1 > span > h1 {
+.scoreCard > div > span > h3 {
   font-size: xx-large;
   font-family: "Tektur", sans-serif;
   color: aqua;
   margin-top: 5px;
 }
 
-.resultTable > div > button{
-  font-size: larger;
-}
-
-.allQuizButtons > button:hover {
-  background-color: inherit !important; 
-  color: inherit !important; 
+.allQuizBox > div > div > div > button:hover {
+  background-color: inherit !important;
+  color: inherit !important;
   border-color: inherit !important;
   cursor: no-drop;
 }
@@ -123,11 +117,53 @@ label {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+  /* Home */
 
+  #home {
+    width: 95%;
+    margin-bottom: 10px;
+  }
 
-@media only screen and (max-width: 500px) {
-  .container > div > h1 {
-    width: 100% !important;
+  #home > div:nth-child(1) > h1 {
+    width: 100%;
+  }
+
+  .inputBox {
+    width: 75%;
+  }
+
+  /* QuizPage */
+
+  .quizBox {
+    padding: 30px;
+  }
+
+  .quizPage > h1 {
+    margin-bottom: 20px;
+  }
+
+  .quizPage {
+    margin-top: 20px;
   }
 }
 
+@media only screen and (min-width: 900px) {
+  .allQuizBox {
+    width: 75% !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1400px) {
+  .quizBox {
+    padding: 50px;
+  }
+
+  #home > div:nth-child(1) > h1 {
+    width: 75% !important;
+  }
+
+  .inputBox {
+    width: 50%;
+  }
+}

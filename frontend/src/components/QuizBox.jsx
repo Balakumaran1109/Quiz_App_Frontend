@@ -13,21 +13,27 @@ const QuizBox = ({ topic, number, sendDataToParent }) => {
 
   const arrayLength = selectedQuiz?.length || 0;
 
-  //Get Quiz Data from DB
+  // Fetch Quiz Data from DB on Mount
   useEffect(() => {
+    if (!selectedQuiz) return;
+
     const fetchQuizData = async () => {
       try {
         const quizDataFromDB = await getQuiz();
         if (quizDataFromDB?.userQuiz) {
-          setQuizData({
+          const savedQuizData = {
             submittedAnswers: quizDataFromDB.userQuiz.submittedAnswers || {},
             isSubmitted: quizDataFromDB.userQuiz.isSubmitted || {},
-          });
+          };
 
-          console.log("Fetched Quiz Data:", quizDataFromDB);
-          sendDataToParent({
-            submittedQuiz: quizDataFromDB.userQuiz.isSubmitted,
-          });
+          setQuizData(savedQuizData);
+
+          const currentQuestionId = selectedQuiz[index]?.id;
+          setSelectedAnswer(
+            savedQuizData.submittedAnswers[currentQuestionId] || null
+          );
+
+          // console.log("Fetched Quiz Data:", savedQuizData);
         }
       } catch (error) {
         console.error("Error fetching quiz data:", error);
@@ -35,24 +41,26 @@ const QuizBox = ({ topic, number, sendDataToParent }) => {
     };
 
     fetchQuizData();
-  }, []);
+  }, [selectedQuiz, index]);
 
-  // Get Quiz data and update
+  // Handle Answer Selection
   const handleAnswerSelect = (option) => {
     const questionId = selectedQuiz[index]?.id;
 
-    setSelectedAnswer((prev) => (prev === option ? "" : option));
-
     setQuizData((prevData) => {
+      const currentAnswer = prevData.submittedAnswers[questionId];
+
+      // Toggle selection: If the same option is clicked, deselect it
+      const newSelectedAnswer = currentAnswer === option ? undefined : option;
+
       const updatedAnswers = {
         ...prevData.submittedAnswers,
-        [questionId]:
-          prevData.submittedAnswers[questionId] === option ? undefined : option,
+        [questionId]: newSelectedAnswer,
       };
 
       const updatedSubmission = {
         ...prevData.isSubmitted,
-        [questionId]: prevData.isSubmitted[questionId] ? undefined : true,
+        [questionId]: newSelectedAnswer !== undefined,
       };
 
       const updatedQuizData = {
@@ -60,23 +68,24 @@ const QuizBox = ({ topic, number, sendDataToParent }) => {
         isSubmitted: updatedSubmission,
       };
 
-      sendDataToParent({ submittedQuiz: updatedSubmission });
       sendDataToDb(updatedQuizData);
-
       return updatedQuizData;
     });
+
+    setSelectedAnswer((prev) => (prev === option ? null : option));
   };
 
+  // Save current data in DB
   const sendDataToDb = async (quizData) => {
-    console.log("Sending updated quizData to DB:", quizData);
     try {
+      sendDataToParent(quizData);
       await saveQuiz(quizData);
     } catch (error) {
       console.error("Error saving quiz:", error);
     }
   };
 
-  //  Handle Quiz Navigation
+  // Handle Quiz Navigation
   const handleIndexChange = (toggle) => {
     setIndex((prevIndex) => {
       const newIndex =
@@ -88,9 +97,9 @@ const QuizBox = ({ topic, number, sendDataToParent }) => {
           ? prevIndex - 1
           : arrayLength - 1;
 
-      setSelectedAnswer(
-        quizData.submittedAnswers[selectedQuiz[newIndex]?.id] || null
-      );
+      const currentQuestionId = selectedQuiz[newIndex]?.id;
+      setSelectedAnswer(quizData.submittedAnswers[currentQuestionId] || null);
+
       return newIndex;
     });
   };
@@ -110,20 +119,19 @@ const QuizBox = ({ topic, number, sendDataToParent }) => {
   return (
     <>
       {selectedQuiz && selectedQuiz.length > 0 ? (
-        <div className="quizBox border p-5 mb-5">
-          <h3>
-            {index + 1}. {selectedQuiz[index]?.question}
-          </h3>
+        <div className="quizBox border mb-5">
+          <div>
+            <h3>
+              {index + 1}. {selectedQuiz[index]?.question}
+            </h3>
+          </div>
 
           <div className="answers mb-5">
             <div className="d-grid gap-3 mt-5">
               {selectedQuiz[index]?.options?.map((option, i) => (
                 <button
                   className={`btn btn-outline-dark text-start quiz-option ${
-                    quizData.submittedAnswers[selectedQuiz[index]?.id] ===
-                    option
-                      ? "btn-success text-white"
-                      : ""
+                    selectedAnswer === option ? "btn-success text-white" : ""
                   }`}
                   type="button"
                   key={i}
@@ -135,7 +143,7 @@ const QuizBox = ({ topic, number, sendDataToParent }) => {
             </div>
           </div>
 
-          <div className="buttons d-flex align-items-center justify-content-around">
+          <div className="buttons d-flex align-items-center justify-content-between">
             <button
               type="button"
               className="btn btn-success mt-2 mb-2"

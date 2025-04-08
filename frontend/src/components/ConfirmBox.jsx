@@ -5,10 +5,9 @@ const ConfirmBox = () => {
   const navigate = useNavigate();
 
   const handleConfirm = () => {
+    navigate("/result");
     document.body.classList.remove("modal-open");
     document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
-
-    navigate("/result");
   };
 
   return (

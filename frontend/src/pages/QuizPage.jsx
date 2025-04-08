@@ -6,6 +6,7 @@ import Countdown from "../components/Countdown";
 import { useNavigate } from "react-router-dom";
 import ConfirmBox from "../components/ConfirmBox";
 import { getUserDetails } from "../api/userApi";
+import QuizModal from "../components/QuizModal";
 
 const QuizPage = () => {
   const generateNumbers = () => {
@@ -31,6 +32,7 @@ const QuizPage = () => {
     navigate("/result");
   };
 
+  // Get Data from DB
   const handleGetData = useCallback(async () => {
     try {
       const userData = await getUserDetails();
@@ -46,8 +48,8 @@ const QuizPage = () => {
   }, []);
 
   const getQuizData = (data) => {
-    setQuizData(data?.submittedQuiz);
-    console.log(data?.submittedQuiz);
+    setQuizData(data?.isSubmitted);
+    // console.log(data?.isSubmitted);
   };
 
   // Fetch User data
@@ -61,7 +63,7 @@ const QuizPage = () => {
 
   return (
     <>
-      {" "}
+      <QuizModal />
       {isTimeOut ? (
         <div className="container-fluid vh-100">
           <div className="timeout d-flex flex-column align-items-center h-100 gap-5">

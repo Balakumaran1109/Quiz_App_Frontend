@@ -314,7 +314,132 @@
         ],
         "correctAnswer": "All of the above"
       }
-    ]
+    ],
+
+   "mongodb": [
+  {
+    "id": 1,
+    "question": "Which command is used to show all databases in MongoDB?",
+    "options": ["SHOW DBS", "SHOW DATABASES", "LIST DBS", "DISPLAY DBS"],
+    "correctAnswer": "SHOW DBS"
+  },
+  {
+    "id": 2,
+    "question": "Which command is used to create or switch to a database in MongoDB?",
+    "options": ["USE", "CREATE", "SWITCH", "SELECT"],
+    "correctAnswer": "USE"
+  },
+  {
+    "id": 3,
+    "question": "Which format does MongoDB store data in?",
+    "options": ["JSON", "BSON", "XML", "CSV"],
+    "correctAnswer": "BSON"
+  },
+  {
+    "id": 4,
+    "question": "Which command is used to insert a single document in MongoDB?",
+    "options": ["db.collection.insertOne()", "db.collection.insert()", "db.collection.add()", "db.collection.save()"],
+    "correctAnswer": "db.collection.insertOne()"
+  },
+  {
+    "id": 5,
+    "question": "Which method is used to insert multiple documents at once?",
+    "options": ["insertMany()", "insertAll()", "bulkInsert()", "multiInsert()"],
+    "correctAnswer": "insertMany()"
+  },
+  {
+    "id": 6,
+    "question": "Which method retrieves all documents from a collection?",
+    "options": ["find()", "select()", "getAll()", "fetch()"],
+    "correctAnswer": "find()"
+  },
+  {
+    "id": 7,
+    "question": "Which command deletes a single document from a collection?",
+    "options": ["deleteOne()", "removeOne()", "dropOne()", "delete()"],
+    "correctAnswer": "deleteOne()"
+  },
+  {
+    "id": 8,
+    "question": "Which command deletes all matching documents from a collection?",
+    "options": ["deleteMany()", "removeAll()", "dropMany()", "delete()"],
+    "correctAnswer": "deleteMany()"
+  },
+  {
+    "id": 9,
+    "question": "Which function is used to update a document in MongoDB?",
+    "options": ["updateOne()", "updateDocument()", "modifyOne()", "setOne()"],
+    "correctAnswer": "updateOne()"
+  },
+  {
+    "id": 10,
+    "question": "Which MongoDB query returns only specific fields of a document?",
+    "options": ["Projection", "Filter", "Select", "Retrieve"],
+    "correctAnswer": "Projection"
+  },
+  {
+    "id": 11,
+    "question": "Which MongoDB method is used to sort query results?",
+    "options": ["sort()", "orderBy()", "arrange()", "groupBy()"],
+    "correctAnswer": "sort()"
+  },
+  {
+    "id": 12,
+    "question": "Which index type is created by default in MongoDB?",
+    "options": ["_id Index", "Compound Index", "Text Index", "GeoSpatial Index"],
+    "correctAnswer": "_id Index"
+  },
+  {
+    "id": 13,
+    "question": "Which MongoDB method is used for aggregation?",
+    "options": ["aggregate()", "group()", "process()", "collect()"],
+    "correctAnswer": "aggregate()"
+  },
+  {
+    "id": 14,
+    "question": "Which of the following is a NoSQL database?",
+    "options": ["MongoDB", "MySQL", "PostgreSQL", "Oracle"],
+    "correctAnswer": "MongoDB"
+  },
+  {
+    "id": 15,
+    "question": "Which operator is used for pattern matching in MongoDB?",
+    "options": ["$regex", "$match", "$pattern", "$search"],
+    "correctAnswer": "$regex"
+  },
+  {
+    "id": 16,
+    "question": "Which command is used to drop a collection in MongoDB?",
+    "options": ["drop()", "remove()", "delete()", "truncate()"],
+    "correctAnswer": "drop()"
+  },
+  {
+    "id": 17,
+    "question": "Which method is used to limit the number of documents returned?",
+    "options": ["limit()", "restrict()", "top()", "truncate()"],
+    "correctAnswer": "limit()"
+  },
+  {
+    "id": 18,
+    "question": "Which method is used to skip a specified number of documents in a query?",
+    "options": ["skip()", "omit()", "jump()", "bypass()"],
+    "correctAnswer": "skip()"
+  },
+  {
+    "id": 19,
+    "question": "Which feature in MongoDB allows distributed data storage?",
+    "options": ["Sharding", "Replication", "Partitioning", "Clustering"],
+    "correctAnswer": "Sharding"
+  },
+  {
+    "id": 20,
+    "question": "Which feature in MongoDB helps in high availability?",
+    "options": ["Replication", "Sharding", "Partitioning", "Indexing"],
+    "correctAnswer": "Replication"
+  }
+]
+
+
     
   }
 }

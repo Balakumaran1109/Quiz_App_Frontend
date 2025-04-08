@@ -6,11 +6,11 @@ const AllQuiz = ({ selectedQuizData, quizData }) => {
   }
 
   return (
-    <div className="quizBox border p-5 mb-5">
+    <div className="allQuizBox border mb-5 p-4 mx-auto">
       {selectedQuizData.map((quiz, index) => {
-        const submittedAnswer = quizData?.submittedAnswers?.[quiz.id]; 
-        const isCorrect = submittedAnswer === quiz.correctAnswer; 
-        const isUnanswered = submittedAnswer === undefined; 
+        const submittedAnswer = quizData?.submittedAnswers?.[quiz.id];
+        const isCorrect = submittedAnswer === quiz.correctAnswer;
+        const isUnanswered = submittedAnswer === undefined;
 
         return (
           <div key={quiz.id}>
@@ -41,12 +41,10 @@ const AllQuiz = ({ selectedQuizData, quizData }) => {
                 })}
               </div>
             </div>
-             
           </div>
         );
       })}
     </div>
-    
   );
 };
 

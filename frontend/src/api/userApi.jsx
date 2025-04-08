@@ -2,7 +2,6 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 // Register User
-
 export const registerUser = async (userData) => {
   try {
     const response = await axios.post("/users/registeruser", userData);
@@ -25,7 +24,6 @@ export const registerUser = async (userData) => {
 };
 
 // Get User Details
-
 export const getUserDetails = async () => {
   try {
     const token = localStorage.getItem("token");

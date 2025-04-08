@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { MdDoubleArrow } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
-import UserContext from "../context/UserContext";
+import { useNavigate } from "react-router-dom";
 import { registerUser } from "../api/userApi";
 import { startQuiz } from "../api/quizApi";
 import { startTimer } from "../api/timerApi";
@@ -10,8 +9,6 @@ const Home = () => {
   const [selectedQuiz, setSelectedQuiz] = useState("Javascript");
   const [userName, setUserName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
-  const { passUserData } = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -23,6 +20,7 @@ const Home = () => {
     setUserName(e.target.value);
   };
 
+  // Register User and start Quiz
   const handleUserData = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -31,20 +29,20 @@ const Home = () => {
     navigate("/quiz");
     setIsLoading(false);
     await startQuiz();
-    await startTimer(9);
+    await startTimer(900);
   };
 
   return (
     <>
-      <div className="container border border-success rounded mt-4">
-        <div className="d-flex align-items-center justify-content-center">
-          <h1 className="badge text-bg-success w-75 h-50 d-flex align-items-center justify-content-center">
+      <div id="home" className="container border border-success rounded mt-4">
+        <div className="d-flex align-items-center justify-content-center w-100">
+          <h1 className="badge text-bg-success h-50 d-flex align-items-center justify-content-center w-100">
             Welcome to the Quiz App
           </h1>
         </div>
         <div className="chooseBox container border w-75 d-flex align-items-center justify-content-center flex-column p-3">
           <h4>Choose One Quiz</h4>
-          <div className="pt-3">
+          <div className="pt-3 w-75 d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2">
             <div class="form-check form-check-inline">
               <input
                 class="form-check-input"
@@ -104,14 +102,14 @@ const Home = () => {
           </ul>
         </div>
 
-        <div className="inputBox d-flex align-items-center justify-content-center flex-column mb-4 border border-success w-50 m-auto p-2 text-center">
-          <b>Please enter the username to start quiz</b>
+        <div className="inputBox d-flex align-items-center justify-content-center flex-column mb-2 border border-success m-auto p-2 text-center mb-4">
+          <b>Please enter your username to start the Quiz</b>
           <br />
           <form
             onSubmit={handleUserData}
             className="d-flex align-items-center justify-content-center flex-column"
           >
-            <div class="input-group flex-nowrap w-100">
+            <div class="input-group flex-nowrap">
               <input
                 type="text"
                 class="form-control"
@@ -136,6 +134,9 @@ const Home = () => {
                   ></span>
                   &nbsp; Loading...
                 </button>
+                <div className="w-75 m-auto text-center my-1">
+                  <b>Please hold on a moment, your quiz is getting ready</b>
+                </div>
               </>
             ) : (
               <button type="submit" class="btn btn-success mb-3">

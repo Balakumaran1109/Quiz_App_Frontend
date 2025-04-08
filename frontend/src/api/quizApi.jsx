@@ -16,7 +16,7 @@ export const startQuiz = async () => {
       }
     );
     const data = response.data;
-    console.log(data);
+    // console.log(data);
   } catch (error) {
     {
       const message =
@@ -45,7 +45,7 @@ export const saveQuiz = async (quizData) => {
       }
     );
     const data = response.data;
-    console.log(data);
+    // console.log(data);
   } catch (error) {
     {
       const message =
